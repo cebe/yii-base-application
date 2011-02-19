@@ -5,7 +5,7 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
-return array(
+$return = array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
 
@@ -79,6 +79,12 @@ return array(
 				*/
 			),
 		),
+		'viewRenderer'=>array(
+		    'class'=>'application.extensions.yiiext.renderers.smarty.ESmartyViewRenderer',
+		    'fileExtension' => '.tpl',
+		    'pluginsDir' => 'application.extensions.smartyPlugins',
+		    'configDir' => 'application.config.smarty',
+		),
 	),
 
 	// application-level parameters that can be accessed
@@ -88,3 +94,11 @@ return array(
 		'adminEmail'=>'webmaster@example.com',
 	),
 );
+
+$siteConfigFile = dirname(dirname(__FILE__)) . '/sites/_this_/main.php';
+if (file_exists($siteConfigFile)) {
+    $return = CMap::mergeArray($return, include($siteConfigFile));
+}
+
+return $return;
+
