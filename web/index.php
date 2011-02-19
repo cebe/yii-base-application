@@ -1,8 +1,12 @@
 <?php
 
 // change the following paths if necessary
-$yii=dirname(__FILE__).'/../yii-1.1.6.r2877/framework/yii.php';
-$config=dirname(__FILE__).'/protected/config/main.php';
+$yii=dirname(__FILE__).'/../yii/framework/yii.php';
+$config=dirname(__FILE__).'/../application/config/main.php';
+
+if (is_file($site_index=dirname(__FILE__).'/../application/sites/_this_/index.php')) {
+	include $site_index;
+}
 
 // remove the following lines when in production mode
 defined('YII_DEBUG') or define('YII_DEBUG',true);
