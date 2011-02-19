@@ -12,4 +12,4 @@ Installation
 
 * fork/clone this repository.
 * Download latest [yii-framework](http://yii.googlecode.com/files/yii-1.1.6.r2877.tar.gz "Yii-1.1.6") and extract it to the base directory.
-* make link `yii` point to &lt;your extracted yii&gt;/framework
+* make link `yii` point to your extracted yii
