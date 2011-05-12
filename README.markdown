@@ -12,4 +12,10 @@ Installation
 
 * fork/clone this repository.
 * Download latest [yii-framework](http://www.yiiframework.com/download/ "Yii-Framework Download") and extract it somewhere on your disk.
-* create a symlink `yii` in the the root directory of this application that points to your extracted yii-folder. The framework will be accessed through <code>./yii/framework/</code>
+* create a symlink `yii` in the the root directory of this application that points to your extracted yii-folder. The framework will be accessed through `./yii/framework/`
+ `ln -s <path-to-yii>/ yii`
+* create a application runtime directory that is writeable for the webserver
+ `mkdir application/runtime`
+ `chmod go+rwx application/runtime` <- this is only quick and dirty, on a production system you should find a user/group-based access control, not a world-writeable directory
+* ...
+* done.
