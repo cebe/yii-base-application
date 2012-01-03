@@ -1,4 +1,4 @@
-Base Applicaton for [Yii](http://www.yiiframework.com/ "Yii Framework")-Applications
+Base Applicaton for [Yii](http://www.yiiframework.com/ "Yii Framework")-Applications [![Project status](http://stillmaintained.com/cebe/yii-base-application.png)](http://stillmaintained.com/cebe/yii-base-application)
 ====================================================================================
 
 This is a base application to start a new project on.
